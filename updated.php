@@ -1,0 +1,1 @@
+<?php define('POS_UPDATE', 1);

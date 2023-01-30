@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <title>PRP POS</title>    
+    <link rel="stylesheet" href="style.css">
+  </head>
+<main>
+  <body>
+    <div class="topnav">
+      <div class="dropdown left">
+          <button onclick="myFunction()" class="dropbtn">Luchetties</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#">Pizza This</a>
+            <a href="#">City Lights Auto</a>
+            <a href="#">Digital Den</a>
+            <a href="#">Hammer And Forge</a>
+          </div>
+        </div>
+      <a> Dec 15th 2022 | 2:40 PM </a>
+  <a class="right"> Welcome back, Lewis Foley </a> 
+  </div>
+<hr>
+<div class="left"> 
+  <div class="Header">
+      <h3 class="Heading">Products</h3>
+      <div> 
+          <h3 id="myBtn" class="settings fa-solid fa-plus"></h3>
+          <h3 class="settings fa-solid fa-gear"></h3>
+          <h3 class="settings fa-solid fa-user"></h3>
+      </div>
+  </div>
+    <div id="left">
+      <div id="list"></div>
+    </div>
+  </div>
+  <div class="Header">
+      <h3 class="Heading">Cart</h3>
+      <h3 class="trash fa-solid fa-trash" onclick="cart.empty()"></h3>
+  </div>  
+    <div id="right">
+      <div id="cart"></div>
+    </div>
+</div>
+<div class="checkout">
+  <hr>
+  <button class="button" onclick="cart.checkout()">Cash</button>
+  <button class="button" onclick="cart.checkout()">Card</button>
+</div>   
+</div>
+</body>
+</main>
+</html>
+
+<script src="pos.js"></script>
+<script src="cart.js"></script>
+
+<script>
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+</script>
+<script src="https://kit.fontawesome.com/f960273d93.js" crossorigin="anonymous"></script>
